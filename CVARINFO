@@ -1,0 +1,7 @@
+nosave bool camera_flash = true;
+nosave bool camera_flash_fill = true;
+nosave bool camera_journalist = false;
+nosave bool camera_info = false;
+nosave bool camera_info_wad = false;
+nosave int camera_flash_bright = 2;
+server noarchive string game_name;

@@ -1,0 +1,24 @@
+OptionMenu "Photography"
+{
+	Title "Photography"
+	StaticText "Options for photography camera. All settings reflect in-game settings.", "White"
+	StaticText ""
+	StaticText "Camera Flash", "Orange"
+	Option "Flash", "camera_flash", OnOff
+	Slider "Flash Intensity", "camera_flash_bright", 2, 30, 1, 0, "camera_flash"
+	Control "Toggle Key", "toggle_flash"
+	Option "Fill Flash", "camera_flash_fill", OnOff
+	StaticText ""
+	StaticText "Postcarding", "Orange"
+	Option "Level Information", "camera_info", OnOff
+	Option "Wad Information", "camera_info_wad", OnOff, "camera_info"
+	TextField "Wad Name", "game_name", "camera_info_wad"
+	StaticText ""
+	StaticText "Camera Magika", "Orange"
+	Control "Instant Clean Photo", cleansrn
+}
+
+AddOptionMenu "OptionsMenu"
+{
+	Submenu "Photography", "Photography"
+}
