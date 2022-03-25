@@ -1,7 +1,11 @@
-alias savescrn "set ep_screenblocks $screenblocks; set ep_crosshair $crosshair; set ep_show_messages $show_messages"^
-alias resetsrn "r_drawplayersprites 1;crosshair $ep_crosshair; screenblocks $ep_screenblocks;show_messages $ep_show_messages"^
-alias hidescrn "r_drawplayersprites 0;screenblocks 12;crosshair 0;show_messages 0"^
+alias savescrn "set ep_screenblocks $screenblocks; set ep_crosshair $crosshair; set ep_show_messages $show_messages"
+alias resetsrn "r_drawplayersprites 1;crosshair $ep_crosshair; screenblocks $ep_screenblocks;show_messages $ep_show_messages"
+alias hidescrn "r_drawplayersprites 0;screenblocks 12;crosshair 0;show_messages 0"
 alias cleansrn "savescrn;hidescrn;wait;playsound photo;wait;screenshot;wait;resetsrn"
+
+alias inc_overlay "eval + 1 $camera_overlay camera_overlay"
+alias set_overlay "set camera_overlay 69"
+alias toggle_overlay "test > 73 $camera_overlay inc_overlay set_overlay;playsound camera_beep"
 
 alias toggle_flash "eval - 1 $camera_flash camera_flash;playsound camera_beep;pukename photography_camera_toggle_flash"
 
@@ -12,6 +16,9 @@ defaultbind SysRq cleansrn
 
 addmenukey "Toggle Flash" toggle_flash
 defaultbind F toggle_flash
+
+addmenukey "Toggle Grid" toggle_overlay
+defaultbind G toggle_overlay
 
 weaponsection Photography
 addslotdefault 0 PhotoCamera

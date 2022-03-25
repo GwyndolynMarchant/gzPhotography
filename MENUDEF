@@ -1,7 +1,26 @@
+OptionValue "PhotoCamera_Overlay_Options"
+{
+    69, "None"
+    70, "Thirds"
+    71, "Golden Ratio"
+    72, "Root 2 Armature"
+    73, "Diamond"
+}
+
+OptionMenu "PhotographyCredits" {
+	Position 256
+	StaticText "A BESPOKE MOD BY", 1
+	StaticText "$SIGNATURE", 1
+}
+
 OptionMenu "Photography"
 {
 	Title "Photography"
 	StaticText "Options for photography camera. All settings reflect in-game settings.", "White"
+	StaticText ""
+	StaticText "Camera Overlay", "Orange"
+	Option "Grid", "camera_overlay", "PhotoCamera_Overlay_Options"
+	Control "Toggle Key", "toggle_overlay"
 	StaticText ""
 	StaticText "Camera Flash", "Orange"
 	Option "Flash", "camera_flash", OnOff
@@ -16,6 +35,8 @@ OptionMenu "Photography"
 	StaticText ""
 	StaticText "Camera Magika", "Orange"
 	Control "Instant Clean Photo", cleansrn
+	StaticText ""
+	Submenu "Credits", "PhotographyCredits"
 }
 
 AddOptionMenu "OptionsMenu"
