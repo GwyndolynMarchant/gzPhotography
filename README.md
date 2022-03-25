@@ -18,7 +18,7 @@ Alt-firing produces a selfie, by placing the camera in front of you and shooting
 
 ### Flash and Fill Flash
 
-| Fill Modes |
+| Fill Modes | |
 | --- | --- |
 | ![Natural lighting](/screenshots/natural.png) | ![Fill-flash lighting](/screenshots/fill.png)            |
 | ![Flash lighting](/screenshots/flash.png)     | ![Full flash with lighting](/screenshots/flash_fill.png) |
