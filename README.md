@@ -1,6 +1,6 @@
 # ![Icon](/graphics/I_PHCM.png) gzPhotographer 
 
-**gzPhotographer** is a small bespoke mod which adds a photography camera into any gzDoom load order. It has been designed with maximum compatibility with other mods, placing the camera in your inventory under slot 0, and providing a universal printscreen button replacement which takes clean, unobstructed photos.
+**gzPhotographer** is a small bespoke mod which adds a photography camera into any [gzDoom](https://zdoom.org/downloads) load order. It has been designed with maximum compatibility with other mods, placing the camera in your inventory under slot 0, and providing a universal printscreen button replacement which takes clean, unobstructed photos.
 
 ## Features
 
@@ -17,8 +17,9 @@ It has clean animations and graphics based on a *Sony Cybershot DSC-P72*. It doe
 Alt-firing produces a selfie, by placing the camera in front of you and shooting backwards. Note that this means you will not be photographing what is in front of you, but instead what is behind you. Moving will return the perspective to normal.
 
 ### Flash and Fill Flash
+
 | Fill Modes |
-| ------------------------------------------ | ----------------------------------------------------- |
+| --- | --- |
 | ![Natural lighting](/screenshots/natural.png) | ![Fill-flash lighting](/screenshots/fill.png)            |
 | ![Flash lighting](/screenshots/flash.png)     | ![Full flash with lighting](/screenshots/flash_fill.png) |
 
