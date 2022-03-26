@@ -33,15 +33,15 @@ The camera supports multple composition overlays, which can be toggled to cycle 
 
 Note that the camera overlay will follow the same colouring as your crosshair.
 
-### Photo information overlay
-When taking a picture, you may have the mod print map and megawad information onto the photograph. This feature is toggleable in the settings, and provides an override to megawad detection. Note that megawad detection is performed upon starting play, not entering the main menu.
-
 #### Overlays
 - None (default)
 - Thirds
 - Golden Ratio
 - Root 2 Armature
 - Diamond
+
+### Photo information overlay
+When taking a picture, you may have the mod print map and megawad information onto the photograph. This feature is toggleable in the settings, and provides an override to megawad detection. Note that megawad detection is performed upon starting play, not entering the main menu.
 
 ## Compatibility Notes
 - Fill flash may not work correctly with mods which modify the default firing modes of weapons in the engine. (ex: [Castlevania: Simon's Destiny](https://batandy.itch.io/simonsdestiny))
