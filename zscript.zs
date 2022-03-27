@@ -82,6 +82,7 @@ class PhotoShim : EventHandler
 
 	override void WorldLoaded (WorldEvent e) {
 		CVar game_name = CVar.FindCVar("game_name");
+		if (game_name.GetString() != "") return;
 
 		// Quickly check IWAD type against filterable titles
 		game_name.SetString(FilterGameIwad());
