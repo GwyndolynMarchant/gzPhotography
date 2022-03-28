@@ -6,3 +6,5 @@ nosave bool camera_info_wad = true;
 nosave int camera_flash_bright = 2;
 nosave int camera_overlay = 69;
 server noarchive string game_name;
+server float screenoffset = 6966669.0;
+server bool camera_displaying_overlay = false;

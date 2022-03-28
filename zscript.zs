@@ -90,7 +90,7 @@ class PhotoShim : EventHandler
 		// Check to see if there is an IWADINFO lump which could have a different game name
 		int lump = -1;
 		while (-1 != (lump = Wads.FindLump("IWADINFO", lump + 1)))
-		{		
+		{
 			string content = Wads.ReadLump(lump);
 			array<string> lines;
 			content.split(lines,"\n");
@@ -123,17 +123,48 @@ class PhotoShim : EventHandler
 			}
 		}
 	}
+
+	override void RenderOverlay (RenderEvent e) {
+		if (!CVar.GetCVar("camera_info").GetBool()) return;
+
+		double offset = CVar.GetCVar("screenoffset").GetFloat();
+
+		Screen.DrawText(bigfont,
+						Font.CR_DARKGREEN,
+						offset + (Screen.GetWidth() * 0.05),
+						offset + (Screen.GetHeight() * 0.95) - CleanYfac * 14,
+						level.LevelName,
+						DTA_CleanNoMove, true);
+		
+		string gamename = CVar.GetCVar("game_name").GetString();
+		
+		Screen.DrawText(smallfont,
+						Font.CR_DARKGREEN,
+						offset + (Screen.GetWidth() * 0.05),
+						offset + (Screen.GetHeight() * 0.95),
+						gamename,
+						DTA_CleanNoMove, true);	
+	}
 }
 
 class PhotoCamera : Weapon
 {
+	Vector2 offsets;
+
 	Default {
-		Weapon.SelectionOrder 0;
+		Inventory.Amount 0;
+   		Inventory.MaxAmount 1;
+   		Inventory.Icon "I_PHCM";
+   		+INVENTORY.UNDROPPABLE;
+
+		Weapon.SelectionOrder 6966669;
 		Weapon.AmmoUse 0;
 		Weapon.AmmoGive 0;
-		Inventory.Icon "I_PHCM";
-		Obituary "Journalism is scary.";
 		+WEAPON.WIMPY_WEAPON;
+		+WEAPON.NOAUTOSWITCHTO;
+		+WEAPON.NOAUTOAIM;
+
+		Obituary "Journalism is scary.";
 		Tag "Photography Camera";
 	}
 
@@ -162,9 +193,8 @@ class PhotoCamera : Weapon
 					int b = CVar.GetCVar("camera_flash_bright").GetInt();
 					A_Light(b);
 				}
-				if (CVar.GetCVar("camera_info").GetBool()) {
-					CallACS("photography_camera_display");
-				}
+				double offset = CVar.GetCVar("screenoffset").GetFloat();
+				invoker.offsets = Screen.SetOffset(-offset, -offset);
 			}
 			TNT1 A 12 {
 				level.MakeScreenShot();
@@ -173,6 +203,7 @@ class PhotoCamera : Weapon
 				A_Light0();
 				A_StartSound("photo");
 				A_SetCrosshair(0);
+				Screen.SetOffset(invoker.offsets.x, invoker.offsets.y);
 			}
 			PHCM DEFGHI 1;
 			Goto Ready;
@@ -180,16 +211,16 @@ class PhotoCamera : Weapon
 			TNT1 A 0 {
 				A_SpawnItemEx("AimingCamera", -25, 5, 48, 0, 0, 0, 180, SXF_ISTARGET);
 				SetCamera(target, true);
+				double offset = CVar.GetCVar("screenoffset").GetFloat();
+				invoker.offsets = Screen.SetOffset(-offset, -offset);
 			}
 			TNT1 B 15 {
-				if (CVar.GetCVar("camera_info").GetBool()) {
-					CallACS("photography_camera_display");
-				}
 				level.MakeScreenShot();
 			}
 			TNT1 C 8 {
 				A_StartSound("photo");
 				A_SetCrosshair(0);
+				Screen.SetOffset(invoker.offsets.x, invoker.offsets.y);
 			}
 			Goto Ready;
 		FlashFill:

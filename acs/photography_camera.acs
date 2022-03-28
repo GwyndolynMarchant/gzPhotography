@@ -12,14 +12,3 @@ script "photography_camera_toggle_flash" (void) {
 		print(s:"\caCamera flash off");
 	}
 }
-
-script "photography_camera_display" (void) {
-	SetFont("BIGFONT");
-	HudMessage(n:PRINTNAME_LEVELNAME;
-		0, 1, CR_DARKGREEN, 0.05, 0.95, 1.5);
-	if (GetCVar("camera_info_wad")) {
-		SetFont("SMALLFONT");
-		HudMessage(s:GetCVarString("game_name");
-			0, 2, CR_DARKGREEN, 0.05, -0.95, 1.5);
-	}
-}
