@@ -2,6 +2,8 @@
 
 **gzPhotographer** is a small bespoke mod which adds a photography camera into any [gzDoom](https://zdoom.org/downloads) load order. It has been designed with maximum compatibility with other mods, placing the camera in your inventory under slot 0, and providing a universal printscreen button replacement which takes clean, unobstructed photos.
 
+**To enable photo-taking, you will need to turn on `Options > Miscellaneous > Enable making screenshots by script`.**
+
 ## Features
 
 ### Sorry Cyberimp DSC-P72
