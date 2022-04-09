@@ -48,3 +48,4 @@ When taking a picture, you may have the mod print map and megawad information on
 ## Compatibility Notes
 - Fill flash may not work correctly with mods which modify the default firing modes of weapons in the engine. (ex: [Castlevania: Simon's Destiny](https://batandy.itch.io/simonsdestiny))
 - The camera will not be accessible or functional with mods which entirely disable weapons. (ex: [GZ P.T.](https://batandy.itch.io/gz-pt)) In these cases, the universal hotkey should still function.
+- Screen clearing is done by translating the screen 6966669 screen units down-right, so if there's anything else being drawn in that corner it will be revealed.
