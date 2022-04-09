@@ -133,7 +133,7 @@ class PhotoShim : EventHandler
 		Screen.DrawText("OSDlg",
 						f_color,
 						offset + (Screen.GetWidth() * 0.05),
-						offset + (Screen.GetHeight() * 0.95) - (CleanYfac * 30),
+						offset + (Screen.GetHeight() * 0.95) - (CleanYfac * 50),
 						level.LevelName,
 						DTA_CleanNoMove, true);
 		
@@ -142,7 +142,7 @@ class PhotoShim : EventHandler
 		Screen.DrawText("OSDsm",
 						f_color,
 						offset + (Screen.GetWidth() * 0.05),
-						offset + (Screen.GetHeight() * 0.95) - (CleanYfac * 6),
+						offset + (Screen.GetHeight() * 0.95) - (CleanYfac * 20),
 						gamename,
 						DTA_CleanNoMove, true);	
 	}
