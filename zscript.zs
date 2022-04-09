@@ -128,20 +128,21 @@ class PhotoShim : EventHandler
 		if (!CVar.GetCVar("camera_info").GetBool()) return;
 
 		double offset = CVar.GetCVar("screenoffset").GetFloat();
+		int f_color = CVar.GetCVar("camera_osd_color").GetInt();
 
 		Screen.DrawText("OSDlg",
-						Font.CR_DARKGREEN,
+						f_color,
 						offset + (Screen.GetWidth() * 0.05),
-						offset + (Screen.GetHeight() * 0.95) - CleanYfac * 30,
+						offset + (Screen.GetHeight() * 0.95) - (CleanYfac * 30),
 						level.LevelName,
 						DTA_CleanNoMove, true);
 		
 		string gamename = CVar.GetCVar("game_name").GetString();
 		
 		Screen.DrawText("OSDsm",
-						Font.CR_DARKGREEN,
+						f_color,
 						offset + (Screen.GetWidth() * 0.05),
-						offset + (Screen.GetHeight() * 0.95) - CleanYfac * 6,
+						offset + (Screen.GetHeight() * 0.95) - (CleanYfac * 6),
 						gamename,
 						DTA_CleanNoMove, true);	
 	}

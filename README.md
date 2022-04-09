@@ -43,7 +43,7 @@ Note that the camera overlay will follow the same colouring as your crosshair.
 - Diamond
 
 ### Photo information overlay
-When taking a picture, you may have the mod print map and megawad information onto the photograph. This feature is toggleable in the settings, and provides an override to megawad detection. Note that megawad detection is performed upon starting play, not entering the main menu.
+When taking a picture, you may have the mod print map and megawad information onto the photograph. This feature is toggleable in the settings, and provides an override to megawad detection. The color of the overlay defaults to white, but can be changed in the options menu. *Note that megawad detection is performed upon starting play, not entering the main menu.*
 
 The photo information overlay features two fonts:
 - [VCR OSD Overlay](https://www.dafont.com/vcr-osd-mono.font) by Riciery Leal
