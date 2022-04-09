@@ -187,6 +187,8 @@ class PhotoCamera : Weapon
 			Loop;
 		Fire:
 			PHCM B 2 {
+				if (CVar.GetCVar("camera_flash_fill").GetBool())
+					A_GunFlash("FlashFill");
 				A_SetCrosshair(69); // custom null crosshair
 				if (CVar.GetCVar("camera_flash").GetBool()) {
 					int b = CVar.GetCVar("camera_flash_bright").GetInt();
@@ -194,10 +196,8 @@ class PhotoCamera : Weapon
 				}
 				double offset = CVar.GetCVar("screenoffset").GetFloat();
 				invoker.offsets = Screen.SetOffset(-offset, -offset);
-				if (CVar.GetCVar("camera_flash_fill").GetBool())
-					A_GunFlash("FlashFill");
 			}
-			TNT1 A 35 {
+			TNT1 A 13 {
 				level.MakeScreenShot();
 			}
 			PHCM C 1 {
@@ -215,7 +215,7 @@ class PhotoCamera : Weapon
 				double offset = CVar.GetCVar("screenoffset").GetFloat();
 				invoker.offsets = Screen.SetOffset(-offset, -offset);
 			}
-			TNT1 B 35 {
+			TNT1 B 15 {
 				level.MakeScreenShot();
 			}
 			TNT1 C 8 {
@@ -225,7 +225,7 @@ class PhotoCamera : Weapon
 			}
 			Goto Ready;
 		FlashFill:
-			TNT1 A 3;
+			TNT1 A 15;
 			Stop;
 		Spawn:
 			PHCM A -1;
