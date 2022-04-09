@@ -3,42 +3,6 @@ version "4.7.1"
 class PhotoShim : EventHandler
 {
 	string FilterGameIwad (void) {
-		// Standalone IWADs
-		if (CVar.FindCVar("GAME_BLASPHEMER")) return "Blasphemer";
-		if (CVar.FindCVar("GAME_URBAN")) return "Action Doom 2: Urban Brawl";
-		if (CVar.FindCVar("GAME_HARMONY")) return "Harmony";
-		if (CVar.FindCVar("GAME_DEL")) return "Delaweare";
-		if (CVar.FindCVar("GAME_ROTWB")) return "Rise Of The Wool Ball";
-
-		// Heretic
-		if (CVar.FindCVar("GAME_HERETIC")) {
-			if (CVar.FindCVar("GAME_HERETIC_SHADOW")) return "Heretic: Shadow of the Serpent Riders";
-			return "Heretic";
-		}
-
-		// Hexen
-		if (CVar.FindCVar("GAME_HEXEN_KING")) return "Hexen: Deathkings of the Dark Citadel";
-		if (CVar.FindCVar("GAME_HEXEN")) return "Hexen: Beyond Heretic";
-
-		// Strife
-		if (CVar.FindCVar("GAME_STRIFE_VETERAN")) return "Strife: Veteran Edition";
-		if (CVar.FindCVar("GAME_STRIFE")) return "Strife: Quest for the Sigil";
-
-		// Chex
-		if (CVar.FindCVar("GAME_CHEX3")) return "Chex® Quest 3";
-		if (CVar.FindCVar("GAME_CHEX")) return "Chex® Quest";
-
-		// Hacx
-		if (CVar.FindCVar("GAME_HACX2")) return "Hacx 2.0";
-		if (CVar.FindCVar("GAME_HACX")) return "Hacx: Twitch'n Kill";
-
-		// Square
-		if (CVar.FindCVar("GAME_SQUARE")) return "The Adventures of Square (Square-ware)";
-		if (CVar.FindCVar("GAME_SQUARE2")) return "The Adventures of Square";
-
-		// Doom Complete
-		if (CVar.FindCVar("GAME_DOOM_COMPLETE")) return "DOOM: Complete: WadSmoosh";
-
 		// Freedoom Variant
 		if (CVar.FindCVar("GAME_FREEDOOM")) {
 			if (CVar.FindCVar("GAME_FREEDOOM_DM")) return "FreeDM";
@@ -76,6 +40,42 @@ class PhotoShim : EventHandler
 			if (CVar.FindCVar("GAME_DOOM2_XB")) return "Doom 2: XBox Edition";
 			return "Doom 2: Hell on Earth";
 		}
+
+		// Heretic
+		if (CVar.FindCVar("GAME_HERETIC")) {
+			if (CVar.FindCVar("GAME_HERETIC_SHADOW")) return "Heretic: Shadow of the Serpent Riders";
+			return "Heretic";
+		}
+
+		// Standalone IWADs
+		if (CVar.FindCVar("GAME_BLASPHEMER")) return "Blasphemer";
+		if (CVar.FindCVar("GAME_URBAN")) return "Action Doom 2: Urban Brawl";
+		if (CVar.FindCVar("GAME_HARMONY")) return "Harmony";
+		if (CVar.FindCVar("GAME_DEL")) return "Delaweare";
+		if (CVar.FindCVar("GAME_ROTWB")) return "Rise Of The Wool Ball";
+
+		// Hexen
+		if (CVar.FindCVar("GAME_HEXEN_KING")) return "Hexen: Deathkings of the Dark Citadel";
+		if (CVar.FindCVar("GAME_HEXEN")) return "Hexen: Beyond Heretic";
+
+		// Strife
+		if (CVar.FindCVar("GAME_STRIFE_VETERAN")) return "Strife: Veteran Edition";
+		if (CVar.FindCVar("GAME_STRIFE")) return "Strife: Quest for the Sigil";
+
+		// Chex
+		if (CVar.FindCVar("GAME_CHEX3")) return "Chex® Quest 3";
+		if (CVar.FindCVar("GAME_CHEX")) return "Chex® Quest";
+
+		// Hacx
+		if (CVar.FindCVar("GAME_HACX2")) return "Hacx 2.0";
+		if (CVar.FindCVar("GAME_HACX")) return "Hacx: Twitch'n Kill";
+
+		// Square
+		if (CVar.FindCVar("GAME_SQUARE")) return "The Adventures of Square (Square-ware)";
+		if (CVar.FindCVar("GAME_SQUARE2")) return "The Adventures of Square";
+
+		// Doom Complete
+		if (CVar.FindCVar("GAME_DOOM_COMPLETE")) return "DOOM: Complete (WadSmoosh)";
 
 		return "";
 	}
@@ -127,7 +127,7 @@ class PhotoShim : EventHandler
 	override void RenderOverlay (RenderEvent e) {
 		if (!CVar.GetCVar("camera_info").GetBool()) return;
 
-		double offset = CVar.GetCVar("screenoffset").GetFloat();
+		double offset = CVar.GetCVar("camera_osd_offset").GetFloat();
 		int f_color = CVar.GetCVar("camera_osd_color").GetInt();
 
 		Screen.DrawText("OSDlg",
@@ -194,7 +194,7 @@ class PhotoCamera : Weapon
 					int b = CVar.GetCVar("camera_flash_bright").GetInt();
 					A_Light(b);
 				}
-				double offset = CVar.GetCVar("screenoffset").GetFloat();
+				double offset = CVar.GetCVar("camera_osd_offset").GetFloat();
 				invoker.offsets = Screen.SetOffset(-offset, -offset);
 			}
 			TNT1 A 13 {
@@ -212,7 +212,7 @@ class PhotoCamera : Weapon
 			TNT1 A 0 {
 				A_SpawnItemEx("AimingCamera", -25, 5, 48, 0, 0, 0, 180, SXF_ISTARGET);
 				SetCamera(target, true);
-				double offset = CVar.GetCVar("screenoffset").GetFloat();
+				double offset = CVar.GetCVar("camera_osd_offset").GetFloat();
 				invoker.offsets = Screen.SetOffset(-offset, -offset);
 			}
 			TNT1 B 15 {

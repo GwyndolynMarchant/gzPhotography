@@ -8,5 +8,5 @@ nosave int camera_overlay = 69;
 nosave int camera_osd_color = 9;
 
 nosave noarchive string game_name;
-nosave noarchive float screenoffset = -6966669.0;
+nosave noarchive float camera_osd_offset = -42069;
 nosave noarchive bool camera_displaying_overlay = false;
