@@ -45,6 +45,10 @@ Note that the camera overlay will follow the same colouring as your crosshair.
 ### Photo information overlay
 When taking a picture, you may have the mod print map and megawad information onto the photograph. This feature is toggleable in the settings, and provides an override to megawad detection. Note that megawad detection is performed upon starting play, not entering the main menu.
 
+The photo information overlay features two fonts:
+- [VCR OSD Overlay](https://www.dafont.com/vcr-osd-mono.font) by Riciery Leal
+- [OCR A Extended](https://docs.microsoft.com/en-us/typography/font-list/ocr-a-extended)
+
 ## Compatibility Notes
 - Fill flash may not work correctly with mods which modify the default firing modes of weapons in the engine. (ex: [Castlevania: Simon's Destiny](https://batandy.itch.io/simonsdestiny))
 - The camera will not be accessible or functional with mods which entirely disable weapons. (ex: [GZ P.T.](https://batandy.itch.io/gz-pt)) In these cases, the universal hotkey should still function.

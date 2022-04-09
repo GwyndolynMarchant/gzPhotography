@@ -129,19 +129,19 @@ class PhotoShim : EventHandler
 
 		double offset = CVar.GetCVar("screenoffset").GetFloat();
 
-		Screen.DrawText(bigfont,
+		Screen.DrawText("OSDlg",
 						Font.CR_DARKGREEN,
 						offset + (Screen.GetWidth() * 0.05),
-						offset + (Screen.GetHeight() * 0.95) - CleanYfac * 14,
+						offset + (Screen.GetHeight() * 0.95) - CleanYfac * 30,
 						level.LevelName,
 						DTA_CleanNoMove, true);
 		
 		string gamename = CVar.GetCVar("game_name").GetString();
 		
-		Screen.DrawText(smallfont,
+		Screen.DrawText("OSDsm",
 						Font.CR_DARKGREEN,
 						offset + (Screen.GetWidth() * 0.05),
-						offset + (Screen.GetHeight() * 0.95),
+						offset + (Screen.GetHeight() * 0.95) - CleanYfac * 6,
 						gamename,
 						DTA_CleanNoMove, true);	
 	}
