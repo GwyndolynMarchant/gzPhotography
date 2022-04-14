@@ -54,3 +54,5 @@ The photo information overlay features two fonts:
 - The camera will not be accessible or functional with mods which entirely disable weapons. (ex: [GZ P.T.](https://batandy.itch.io/gz-pt)) In these cases, the universal hotkey should still function.
 - Screen clearing is done by translating the screen 42069 screen units down-right, so if there's anything else being drawn in that corner it will be revealed.
 - Although the photography mod itself works on all preconfigured screen resolutions, some options menu text will be cut off at resolutions below 1024 horizontal pixels
+
+For full compatibility notes, please see [the documentation](docs/compatibility.md).
