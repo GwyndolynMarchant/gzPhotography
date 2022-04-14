@@ -197,16 +197,16 @@ class PhotoCamera : Weapon
 				double offset = CVar.GetCVar("camera_osd_offset").GetFloat();
 				invoker.offsets = Screen.SetOffset(-offset, -offset);
 			}
-			TNT1 A 13 {
+			TNT1 A 35 {
 				level.MakeScreenShot();
 			}
-			PHCM C 1 {
+			TNT1 A 1 {
 				A_Light0();
 				A_StartSound("photo");
 				A_SetCrosshair(0);
 				Screen.SetOffset(invoker.offsets.x, invoker.offsets.y);
 			}
-			PHCM DEFGHI 1;
+			PHCM CDEFGHI 1;
 			Goto Ready;
 		AltFire:
 			TNT1 A 0 {
@@ -215,7 +215,7 @@ class PhotoCamera : Weapon
 				double offset = CVar.GetCVar("camera_osd_offset").GetFloat();
 				invoker.offsets = Screen.SetOffset(-offset, -offset);
 			}
-			TNT1 B 15 {
+			TNT1 B 35 {
 				level.MakeScreenShot();
 			}
 			TNT1 C 8 {

@@ -65,7 +65,7 @@ OptionMenu "Photography"
 	Option "Flash", "camera_flash", OnOff
 	Slider "Flash Intensity", "camera_flash_bright", 2, 30, 1, 0, "camera_flash"
 	Control "Toggle Key", "toggle_flash"
-	Option "(Req. lights.pk3) Fill Flash", "camera_flash_fill", OnOff, "autoloadlights"
+	Option "(Req. lights.pk3) Fill Flash", "camera_flash_fill", OnOff
 	StaticText ""
 	StaticText "Postcarding", "Orange"
 	Option "Level Information", "camera_info", OnOff
