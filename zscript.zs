@@ -194,10 +194,12 @@ class PhotoCamera : Weapon
 					int b = CVar.GetCVar("camera_flash_bright").GetInt();
 					A_Light(b);
 				}
+			}
+			TNT1 A 1 {
 				double offset = CVar.GetCVar("camera_osd_offset").GetFloat();
 				invoker.offsets = Screen.SetOffset(-offset, -offset);
 			}
-			TNT1 A 35 {
+			TNT1 A 30 {
 				level.MakeScreenShot();
 			}
 			TNT1 A 1 {
