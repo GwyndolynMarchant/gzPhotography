@@ -1,3 +1,32 @@
+OptionValue "PhotoCamera_OSD_Colors"
+{
+	0, "Brick Red"
+    1, "Tan"
+    2, "Grey"
+    3, "Green"
+    4, "Brown"
+    5, "Golden"
+    6, "Red"
+    7, "Blue"
+    8, "Orange"
+    9, "White"
+    10, "Yellow"
+    12, "Black"
+    13, "Light Blue"
+    14, "Cream"
+    15, "Olive"
+    16, "Dark Green"
+    17, "Dark Red"
+    18, "Dark Brown"
+    19, "Pink"
+    20, "Dark Gray"
+    21, "Cyan"
+    22, "Ice"
+    23, "Fire"
+    24, "Sapphire"
+    25, "Teal"
+}
+
 OptionValue "PhotoCamera_Overlay_Options"
 {
     69, "None"
@@ -8,9 +37,19 @@ OptionValue "PhotoCamera_Overlay_Options"
 }
 
 OptionMenu "PhotographyCredits" {
-	Position 256
+	Position 150
 	StaticText "A BESPOKE MOD BY", 1
 	StaticText "$SIGNATURE", 1
+}
+
+OptionMenu "PhotographyAdvanced" {
+	Title "Advanced Photography Settings"
+	StaticText "$PHOTO_ADV_WARN", 1
+	StaticText ""
+	StaticText ""
+	StaticText ""
+	NumberField "OSD Render Offset", "camera_osd_offset", -6966669, -4000, 100
+
 }
 
 OptionMenu "Photography"
@@ -26,16 +65,18 @@ OptionMenu "Photography"
 	Option "Flash", "camera_flash", OnOff
 	Slider "Flash Intensity", "camera_flash_bright", 2, 30, 1, 0, "camera_flash"
 	Control "Toggle Key", "toggle_flash"
-	Option "Fill Flash", "camera_flash_fill", OnOff
+	Option "(Req. lights.pk3) Fill Flash", "camera_flash_fill", OnOff
 	StaticText ""
 	StaticText "Postcarding", "Orange"
 	Option "Level Information", "camera_info", OnOff
 	Option "Wad Information", "camera_info_wad", OnOff, "camera_info"
 	TextField "Wad Name", "game_name", "camera_info_wad"
+	Option "OSD Color", "camera_osd_color", "PhotoCamera_OSD_Colors"
 	StaticText ""
 	StaticText "Camera Magika", "Orange"
 	Control "Instant Clean Photo", cleansrn
 	StaticText ""
+	Submenu "Advanced Settings", "PhotographyAdvanced"
 	Submenu "Credits", "PhotographyCredits"
 }
 

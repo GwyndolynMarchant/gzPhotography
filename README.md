@@ -1,6 +1,6 @@
-# ![Icon](/graphics/I_PHCM.png) gzPhotographer 
+# ![Icon](/graphics/I_PHCM.png) gzPhotography
 
-**gzPhotographer** is a small bespoke mod which adds a photography camera into any [gzDoom](https://zdoom.org/downloads) load order. It has been designed with maximum compatibility with other mods, placing the camera in your inventory under slot 0, and providing a universal printscreen button replacement which takes clean, unobstructed photos.
+**gzPhotography** is a small bespoke mod which adds a photography camera into any [gzDoom](https://zdoom.org/downloads) load order. It has been designed with maximum compatibility with other mods, placing the camera in your inventory under slot 0, and providing a universal printscreen button replacement which takes clean, unobstructed photos.
 
 **To enable photo-taking, you will need to turn on `Options > Miscellaneous > Enable making screenshots by script`.**
 
@@ -43,8 +43,16 @@ Note that the camera overlay will follow the same colouring as your crosshair.
 - Diamond
 
 ### Photo information overlay
-When taking a picture, you may have the mod print map and megawad information onto the photograph. This feature is toggleable in the settings, and provides an override to megawad detection. Note that megawad detection is performed upon starting play, not entering the main menu.
+When taking a picture, you may have the mod print map and megawad information onto the photograph. This feature is toggleable in the settings, and provides an override to megawad detection. The color of the overlay defaults to white, but can be changed in the options menu. *Note that megawad detection is performed upon starting play, not entering the main menu.*
+
+The photo information overlay features two fonts:
+- [VCR OSD Overlay](https://www.dafont.com/vcr-osd-mono.font) by Riciery Leal
+- [OCR A Extended](https://docs.microsoft.com/en-us/typography/font-list/ocr-a-extended)
 
 ## Compatibility Notes
 - Fill flash may not work correctly with mods which modify the default firing modes of weapons in the engine. (ex: [Castlevania: Simon's Destiny](https://batandy.itch.io/simonsdestiny))
 - The camera will not be accessible or functional with mods which entirely disable weapons. (ex: [GZ P.T.](https://batandy.itch.io/gz-pt)) In these cases, the universal hotkey should still function.
+- Screen clearing is done by translating the screen 42069 screen units down-right, so if there's anything else being drawn in that corner it will be revealed.
+- Although the photography mod itself works on all preconfigured screen resolutions, some options menu text will be cut off at resolutions below 1024 horizontal pixels
+
+For full compatibility notes, please see [the documentation](docs/compatibility.md).

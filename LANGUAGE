@@ -21,3 +21,7 @@ SIGNATURE =
 "        ▟██▛ ▜█▙   ▟██▛        ███ ▟██          ▜█▛            ▟██▛   ▟██▛           ██      ▜█▛    ██▛   ▜█▙     ▟█▛    ▜█▛ \n"
 "        ▜█▛   ▜██▇█▇██        ▟█▛▜███▛                         ▜█▛    ▜█▛            ▜▛             ▜▛     ▜███████▛         \n"
 "               ▀▜██▛▀         ▜▛                                                                                             ";
+PHOTO_ADV_WARN =
+"WARNING: These are advanced backend settings which alter settings configured by the mod.\n"
+"Changing these could theoretically fix some problems, but it's very likely things might\n"
+"break disasterously. Please only use as a last resort, or for debugging.";
