@@ -151,4 +151,11 @@ class PhotoShim : EventHandler
 						gamename,
 						DTA_CleanNoMove, true);
 	}
+
+	override void PlayerSpawned (PlayerEvent e) {
+		let plr = players[e.PlayerNumber].Mo;
+		if (plr) {
+			plr.GiveInventory("PhotoCamera", 1);
+		}
+	}
 }
