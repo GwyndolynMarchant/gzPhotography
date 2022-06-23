@@ -7,7 +7,7 @@ alias inc_overlay "eval + 1 $camera_overlay camera_overlay"
 alias set_overlay "set camera_overlay 69"
 alias toggle_overlay "test > 73 $camera_overlay inc_overlay set_overlay;playsound camera_beep"
 
-alias toggle_flash "eval - 1 $camera_flash camera_flash;playsound camera_beep;pukename photography_camera_toggle_flash"
+alias toggle_flash "eval - 1 $camera_flash camera_flash;playsound camera_beep;netevent photography_camera_toggle_flash"
 
 addkeysection "Photography" photography
 

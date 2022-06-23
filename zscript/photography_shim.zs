@@ -158,4 +158,17 @@ class PhotoShim : EventHandler
 			plr.GiveInventory("PhotoCamera", 1);
 		}
 	}
+
+	override void NetworkProcess(ConsoleEvent e)
+    {
+        if (e.Name == "photography_camera_toggle_flash")
+        {
+            let plr = players[e.Player].mo;
+            if (CVar.GetCVar("camera_flash").GetBool()) {
+				plr.A_Print("\cdCamera flash on");
+			} else {
+				plr.A_Print("\caCamera flash off");
+			}
+        }
+    }
 }

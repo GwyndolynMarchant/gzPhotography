@@ -5,11 +5,12 @@
 - Although the photography mod itself works on all preconfigured screen resolutions, some options menu text will be cut off at resolutions below 1024 horizontal pixels
 - Fill Flash requires lights.pk3 to be loaded 
 
-| WAD              | Camera | Flash | Fill Flash | Comments |
-|------------------|:------:|:-----:|:----------:|------------|
-| Doom             | ✔    | ✔    | ✔         |                                           |
-| Doom 2           | ✔    | ✔    | ✔         |                                           |
-| [Hocus Pocus Doom](https://www.moddb.com/mods/hocus-pocus-doom) | ✔    | ✔    | ❌         | Level title partially stuck on Fire color | 
-| [Castlevania: Simon's Destiny](https://batandy.itch.io/simonsdestiny) | ✔    | ✔    | ❌         | |
+| WAD | Camera | Flash | Fill Flash | Comments |
+|-----|:------:|:-----:|:----------:|----------|
+| Doom | ✔ | ✔ | ✔ | |
+| Doom 2 | ✔ | ✔ | ✔ | |
+| [Hocus Pocus Doom](https://www.moddb.com/mods/hocus-pocus-doom) | ✔ | ✔ | ❌ | Level title partially stuck on Fire color | 
+| [Castlevania: Simon's Destiny](https://batandy.itch.io/simonsdestiny) | ✔ | ✔ | ❌ | |
 | [GZ P.T.](https://batandy.itch.io/gz-pt) | ❌ | ❌ | ❌ | |
-| [Codename: DEMOLITIONIST](https://forum.zdoom.org/viewtopic.php?f=43&t=67687) | ✔    | ✔    | ✔         | |
+| [Codename: DEMOLITIONIST](https://forum.zdoom.org/viewtopic.php?f=43&t=67687) | ✔ | ✔ | ✔ | |
+| [NeoCore](https://forum.zdoom.org/viewtopic.php?f=43&t=69741) | ✔ | ✔ | ❌ | |
